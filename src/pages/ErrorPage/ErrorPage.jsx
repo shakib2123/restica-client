@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import errorAnime from "../../assets/ErrorPageAnime.json";
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const ErrorPage = () => {
   return (
     <div className="flex items-center justify-center h-screen">
@@ -13,13 +14,15 @@ const ErrorPage = () => {
             Sorry, the page you're looking for isn't available.
           </div>
           <div className="flex items-center justify-center">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-pink-600 px-4 py-1 text-white font-medium rounded-lg cursor-pointer flex items-center"
-            >
-              Visit Homepage <AiOutlineDoubleRight />
-            </motion.button>
+            <Link to="/">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-pink-600 px-4 py-1 text-white font-medium rounded-lg cursor-pointer flex items-center"
+              >
+                Visit Homepage <AiOutlineDoubleRight />
+              </motion.button>
+            </Link>
           </div>
         </div>
         <div className="md:w-96 w-[70%] md:h-96 h-48  bg-gray-200 rounded-xl overflow-hidden">
