@@ -11,7 +11,7 @@ const Navlinks = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl font-medium rounded-lg hover:scale-105"
+              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
           <FaHome />
@@ -23,7 +23,7 @@ const Navlinks = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl font-medium rounded-lg hover:scale-105"
+              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
           <FaCartShopping />
@@ -35,10 +35,10 @@ const Navlinks = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl font-medium rounded-lg hover:scale-105"
+              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
-          <BiSolidMessageEdit/>
+          <BiSolidMessageEdit />
         </NavLink>
       </li>
     </div>

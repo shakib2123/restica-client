@@ -1,26 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navlinks from "../Navlinks/Navlinks";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 80) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
   };
-  window.addEventListener("scroll", changeBackground);
 
+  window.addEventListener("scroll", changeBackground);
   return (
     <div
       className={
         navbar
-          ? " bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+          ? "sticky top-0 z-50 backdrop-blur-3xl backdrop-brightness-105"
           : "bg-transparent"
       }
     >
@@ -32,7 +32,7 @@ const Navbar = () => {
           className="navbar-start"
         >
           <div className="dropdown">
-            <div className="drawer lg:hidden">
+            <div className="z-50 drawer lg:hidden">
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div className="drawer-content">
                 {/* Page content here */}
@@ -81,7 +81,7 @@ const Navbar = () => {
             <motion.span
               initial={{ opacity: 0, x: -15 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ repeat: Infinity, delay: 0.3, duration: 1 }}
+              transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
             >
               {" "}
               <BiLogIn />
