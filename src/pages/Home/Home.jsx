@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import StepSection from "../../components/StepSection/StepSection";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Banner></Banner>
       </div>
       <div>
+        <StepSection />
         <ContactUs />
         <Footer></Footer>
       </div>
