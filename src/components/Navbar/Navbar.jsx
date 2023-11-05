@@ -1,11 +1,16 @@
-import {  useState } from "react";
+import { useState } from "react";
 import Navlinks from "../Navlinks/Navlinks";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -15,8 +20,15 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
-
   window.addEventListener("scroll", changeBackground);
+
+  const handleLogout = () => {
+    logOut()
+      .then((result) => {
+        Swal.fire("Logout", "Successfully!", "success");
+      })
+      .catch((err) => toast.error(err.message));
+  };
   return (
     <div
       className={
@@ -54,7 +66,6 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            {/* <label tabIndex={0} className="btn btn-ghost "></label> */}
           </div>
           <img className="w-[80px] md:w-[120px]" src="/logo.png" alt="" />
         </motion.div>
@@ -76,23 +87,50 @@ const Navbar = () => {
           transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
           className="navbar-end"
         >
-          <Link to='/login'>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-pink-600 px-4 py-1 md:text-xl text-white font-medium rounded-lg cursor-pointer flex items-center"
-            >
-              Login
-              <motion.span
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    src={
+                      user.photoURL
+                        ? user?.photoURL
+                        : "https://i.ibb.co/6HRWPNv/blank-avatar-profile-picture.jpg"
+                    }
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                {" "}
-                <BiLogIn />
-              </motion.span>
-            </motion.button>
-          </Link>
+                <li>
+                  <p>{user?.displayName}</p>
+                </li>
+                <li>
+                  <button onClick={handleLogout}>Logout</button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link to="/login">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-pink-600 px-4 py-2 shadow-lg shadow-pink-600 hover:shadow-xl hover:shadow-pink-700 md:text-xl text-white font-medium rounded-lg cursor-pointer flex items-center"
+              >
+                Login
+                <motion.span
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+                >
+                  {" "}
+                  <BiLogIn />
+                </motion.span>
+              </motion.button>
+            </Link>
+          )}
         </motion.div>
       </div>
     </div>

@@ -1,7 +1,34 @@
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginAnime from "../../assets/LoginAnime.json";
+import useAuth from "../../hooks/useAuth";
+import toast, { Toaster } from "react-hot-toast";
+import Swal from "sweetalert2";
 const Login = () => {
+  const { logIn } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    logIn(email, password)
+      .then((res) => {
+        Swal.fire("Success!!", "Sign up successfully!", "success");
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((err) => toast.error(err.message));
+  };
+  // const socialLogin = (media) => {
+  //   media()
+  //     .then((res) => {
+  //       navigate(location.state ? location.state : "/");
+  //       Swal.fire("Success!!", "Sign up successfully!", "success");
+  //     })
+  //     .catch((err) => toast.error(err.message));
+  // };
+
   return (
     <div
       style={{
@@ -18,14 +45,15 @@ const Login = () => {
                 Log In
               </h1>
             </div>
-            <form>
+            <form onSubmit={handleLogIn}>
               <div className="flex flex-col justify-center items-center mt-10 md:mt-4 space-y-6 md:space-y-8">
                 <div className="">
                   <div className="m-1 text-lg text-gray-200 text-semibold">
-                    Username
+                    Email
                   </div>
                   <input
-                    type="text"
+                    type="email"
+                    name="email"
                     className="border-b border-gray-200 focus:outline-none text-gray-200 placeholder-opacity-50 font-semibold md:w-72 lg:w-[340px] bg-transparent"
                   />
                 </div>
@@ -35,6 +63,7 @@ const Login = () => {
                   </div>
                   <input
                     type="password"
+                    name="password"
                     className="border-b border-gray-200 focus:outline-none text-gray-200 placeholder-opacity-50 font-semibold md:w-72 lg:w-[340px] bg-transparent"
                   />
                 </div>
@@ -83,6 +112,7 @@ const Login = () => {
           <Lottie animationData={loginAnime} />
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

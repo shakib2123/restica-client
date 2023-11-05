@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+
 import Lottie from "lottie-react";
 import { IoIosArrowForward } from "react-icons/io";
+import { motion} from "framer-motion";
 import foodAnime from "../../assets/FoodAnime.json";
 const textVariants = {
   initial: {
@@ -25,13 +26,17 @@ const textVariants = {
   },
 };
 
-const Banner = () => {
+const Banner = () =>
+{
+
+
   return (
-    <div className="z-0 max-w-7xl mx-auto overflow-hidden">
+    <div  className="z-0 max-w-7xl mx-auto overflow-hidden">
       <div className="hero min-h-[90vh]">
         <div className="hero-content flex-col-reverse lg:flex-row">
           <div className=" lg:text-left">
             <motion.div
+             
               className="max-w-xl space-y-5"
               variants={textVariants}
               initial="initial"
@@ -76,7 +81,11 @@ const Banner = () => {
           </div>
           <div className="card z-0 flex-shrink-0 w-full max-w-sm">
             <div className="flex-1 z-0">
-              <Lottie loop={false} animationData={foodAnime}></Lottie>
+              <Lottie
+                
+                loop={false}
+                animationData={foodAnime}
+              ></Lottie>
             </div>
           </div>
         </div>

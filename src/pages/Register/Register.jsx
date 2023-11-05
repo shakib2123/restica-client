@@ -1,7 +1,44 @@
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginAnime from "../../assets/LoginAnime.json";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
+  const { createUser, profileUpdate } = useAuth();
+   const location = useLocation();
+  const navigate = useNavigate();
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{8,}$/.test(
+        password
+      )
+    ) {
+      return toast.error(
+        "Password should be at least 6 latter, digit and special character."
+      );
+    }
+    createUser(email, password)
+      .then((result) => {
+        profileUpdate(name, photo)
+          .then((result) => console.log(result))
+          .catch((err) => toast.error(err.message));
+        e.target.reset();
+        Swal.fire("Success!!", "Sign up successfully!", "success");
+         navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        Swal.fire("Error!!", error.message, "error");
+      });
+  };
+
   return (
     <div
       style={{
@@ -18,7 +55,7 @@ const Register = () => {
                 Register
               </h1>
             </div>
-            <form>
+            <form onSubmit={handleCreateUser}>
               <div className="flex flex-col justify-center items-center mt-10 md:mt-4 space-y-6 md:space-y-8">
                 <div className="">
                   <div className="m-1 text-lg text-gray-200 text-semibold">
@@ -105,6 +142,7 @@ const Register = () => {
           <Lottie animationData={loginAnime} />
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

@@ -3,8 +3,10 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import StepSection from "../../components/StepSection/StepSection";
+import TopRatedProduct from "../../components/TopRatedProduct/TopRatedProduct";
 
 const Home = () => {
+
   return (
     <div>
       <div
@@ -18,6 +20,7 @@ const Home = () => {
         <Banner></Banner>
       </div>
       <div>
+        <TopRatedProduct />
         <StepSection />
         <ContactUs />
         <Footer></Footer>
