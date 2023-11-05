@@ -10,11 +10,11 @@ const Navlinks = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+              : "text-xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
-          <FaHome />
+          <FaHome /> Home
         </NavLink>
       </li>
       <li title="All Food">
@@ -22,11 +22,11 @@ const Navlinks = () => {
           to="/allFood"
           className={({ isActive }) =>
             isActive
-              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+              : "text-xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
-          <FaCartShopping />
+          <FaCartShopping /> Shop
         </NavLink>
       </li>
       <li title="blog">
@@ -34,11 +34,11 @@ const Navlinks = () => {
           to="/blog"
           className={({ isActive }) =>
             isActive
-              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-2xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
-              : "text-2xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+              ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-xl font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+              : "text-xl text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
           }
         >
-          <BiSolidMessageEdit />
+          <BiSolidMessageEdit /> Blog
         </NavLink>
       </li>
     </div>

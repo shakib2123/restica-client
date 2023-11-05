@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import foodAnime from "../../assets/FoodAnime.json";
 const textVariants = {
   initial: {
-    x: -500,
+    x: -400,
     opacity: 0,
   },
   animate: {

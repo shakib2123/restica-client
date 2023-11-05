@@ -20,7 +20,7 @@ const Navbar = () => {
     <div
       className={
         navbar
-          ? "sticky top-0 z-50 backdrop-blur-3xl backdrop-brightness-105"
+          ? "sticky top-0 z-50 backdrop-blur-3xl border-b backdrop-brightness-105"
           : "bg-transparent"
       }
     >
@@ -37,7 +37,7 @@ const Navbar = () => {
               <div className="drawer-content">
                 {/* Page content here */}
                 <label htmlFor="my-drawer" className="drawer-button">
-                  <AiOutlineMenuUnfold className="text-2xl font-bold" />
+                  <AiOutlineMenuUnfold className="text-2xl text-white font-bold" />
                 </label>
               </div>
               <div className="drawer-side">
