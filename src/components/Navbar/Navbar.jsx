@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Navlinks from "../Navlinks/Navlinks";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
@@ -20,15 +21,16 @@ const Navbar = () => {
     <div
       className={
         navbar
-          ? "sticky top-0 z-50 backdrop-blur-3xl border-b backdrop-brightness-105"
+          ? "sticky top-0 z-50 backdrop-blur-3xl borderb backdrop-brightness-105"
           : "bg-transparent"
       }
     >
       <div className="navbar max-w-7xl mx-auto">
         <motion.div
-          initial={{ x: -500, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ y: -500, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
+          layout
           className="navbar-start"
         >
           <div className="dropdown">
@@ -59,6 +61,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          layout
           transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
           className="navbar-center hidden lg:flex"
         >
@@ -67,26 +70,29 @@ const Navbar = () => {
           </ul>
         </motion.div>
         <motion.div
-          initial={{ x: 500, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ y: -500, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          layout
           transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
           className="navbar-end"
         >
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-pink-600 px-4 py-1 md:text-xl text-white font-medium rounded-lg cursor-pointer flex items-center"
-          >
-            Login
-            <motion.span
-              initial={{ opacity: 0, x: -15 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+          <Link to='/login'>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-pink-600 px-4 py-1 md:text-xl text-white font-medium rounded-lg cursor-pointer flex items-center"
             >
-              {" "}
-              <BiLogIn />
-            </motion.span>
-          </motion.button>
+              Login
+              <motion.span
+                initial={{ opacity: 0, x: -15 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+              >
+                {" "}
+                <BiLogIn />
+              </motion.span>
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

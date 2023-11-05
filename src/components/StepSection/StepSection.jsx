@@ -1,9 +1,18 @@
 import Lottie from "lottie-react";
 import deliveryAnime from "../../assets/FoodDeliveryAnime.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const StepSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 200,
+    });
+  }, []);
   return (
     <div className="max-w-7xl mx-auto my-14 overflow-hidden bg-pink-200 rounded-3xl">
-      <h2 className="text-4xl lg:text-5xl text-center">
+      <h2 data-aos="zoom-in-up" className="text-4xl lg:text-5xl text-center">
         Our Order <span className="text-pink-600 font-medium">Delivery</span>{" "}
         Process
       </h2>
@@ -11,7 +20,7 @@ const StepSection = () => {
         <div className="container px-5 py-8 lg:py-16 mx-auto flex flex-wrap">
           <div className="flex flex-col-reverse  md:flex-row flex-wrap w-full">
             <div className="lg:w-2/5 md:w-1/2 md:pr-10 py-3 md:py-6">
-              <div className="flex relative pb-12">
+              <div data-aos="zoom-out-right" className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
@@ -41,7 +50,7 @@ const StepSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex relative pb-12">
+              <div data-aos="zoom-out-right" className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
@@ -71,7 +80,7 @@ const StepSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex relative pb-12">
+              <div data-aos="zoom-out-right" className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
@@ -102,7 +111,7 @@ const StepSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex relative pb-12">
+              <div data-aos="zoom-out-right" className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
@@ -133,7 +142,7 @@ const StepSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex relative">
+              <div data-aos="zoom-out-right" className="flex relative">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
                   <svg
                     fill="none"
@@ -162,8 +171,13 @@ const StepSection = () => {
                 </div>
               </div>
             </div>
-            
-            <Lottie className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" animationData={deliveryAnime} />
+
+            <Lottie
+              data-aos="zoom-out"
+              className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+              loop={false}
+              animationData={deliveryAnime}
+            />
           </div>
         </div>
       </section>

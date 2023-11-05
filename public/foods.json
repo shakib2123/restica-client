@@ -4,10 +4,10 @@
     "foodImage": "spaghetti.jpg",
     "foodCategory": "Pasta",
     "price": 12.99,
-    "madeBy": "Chef Maria",
+
     "foodOrigin": "Italy",
     "description": "A classic Roman dish with pasta, eggs, Pecorino Romano cheese, guanciale, and black pepper.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -15,10 +15,10 @@
     "foodImage": "sushi.jpg",
     "foodCategory": "Sushi",
     "price": 18.5,
-    "madeBy": "Sushi Master Ken",
+
     "foodOrigin": "Japan",
     "description": "Fresh sushi rolls with a variety of fish, avocado, and cucumber, served with soy sauce and wasabi.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -26,10 +26,10 @@
     "foodImage": "hamburger.jpg",
     "foodCategory": "Burgers",
     "price": 9.99,
-    "madeBy": "Chef John",
+
     "foodOrigin": "United States",
     "description": "Juicy beef patty with lettuce, tomato, cheese, and special sauce in a sesame seed bun.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -37,10 +37,10 @@
     "foodImage": "pad-thai.jpg",
     "foodCategory": "Noodles",
     "price": 10.95,
-    "madeBy": "Chef Tanya",
+
     "foodOrigin": "Thailand",
     "description": "Stir-fried rice noodles with shrimp, tofu, bean sprouts, peanuts, and tamarind sauce.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -48,10 +48,10 @@
     "foodImage": "pizza.jpg",
     "foodCategory": "Pizza",
     "price": 14.99,
-    "madeBy": "Pizza Chef Luigi",
+
     "foodOrigin": "Italy",
     "description": "A classic pizza with tomato, mozzarella, fresh basil, and olive oil on a thin crust.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -59,10 +59,10 @@
     "foodImage": "tandoori-chicken.jpg",
     "foodCategory": "Chicken",
     "price": 16.75,
-    "madeBy": "Chef Raj",
+
     "foodOrigin": "India",
     "description": "Marinated chicken cooked in a clay oven, served with naan and mint chutney.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -70,10 +70,10 @@
     "foodImage": "nigiri.jpg",
     "foodCategory": "Sushi",
     "price": 22.5,
-    "madeBy": "Sushi Master Ken",
+
     "foodOrigin": "Japan",
     "description": "Assorted sushi with fish slices on beds of vinegared rice, served with pickled ginger and soy sauce.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -81,10 +81,10 @@
     "foodImage": "caesar-salad.jpg",
     "foodCategory": "Salad",
     "price": 8.99,
-    "madeBy": "Chef Sarah",
+
     "foodOrigin": "United States",
     "description": "Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -92,10 +92,10 @@
     "foodImage": "ramen.jpg",
     "foodCategory": "Noodles",
     "price": 11.25,
-    "madeBy": "Chef Hiroshi",
+
     "foodOrigin": "Japan",
     "description": "Japanese noodle soup with pork, seaweed, bamboo shoots, and a soft-boiled egg.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -103,10 +103,10 @@
     "foodImage": "tacos.jpg",
     "foodCategory": "Tacos",
     "price": 10.5,
-    "madeBy": "Chef Carlos",
+
     "foodOrigin": "Mexico",
     "description": "Soft corn tortillas filled with seasoned beef, onions, cilantro, and salsa.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -114,10 +114,10 @@
     "foodImage": "shawarma.jpg",
     "foodCategory": "Middle Eastern",
     "price": 13.99,
-    "madeBy": "Chef Ahmed",
+
     "foodOrigin": "Lebanon",
     "description": "Grilled marinated chicken served with pita bread, tahini sauce, and vegetables.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -125,10 +125,10 @@
     "foodImage": "pancakes.jpg",
     "foodCategory": "Breakfast",
     "price": 7.5,
-    "madeBy": "Chef Lisa",
+
     "foodOrigin": "United States",
     "description": "Fluffy pancakes served with maple syrup and butter.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -136,10 +136,10 @@
     "foodImage": "goulash.jpg",
     "foodCategory": "Stew",
     "price": 12.25,
-    "madeBy": "Chef Viktor",
+
     "foodOrigin": "Hungary",
     "description": "Slow-cooked beef stew with paprika, onions, and bell peppers.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -147,10 +147,10 @@
     "foodImage": "caprese-salad.jpg",
     "foodCategory": "Salad",
     "price": 9.5,
-    "madeBy": "Chef Maria",
+
     "foodOrigin": "Italy",
     "description": "Fresh tomatoes, mozzarella cheese, basil, and balsamic glaze.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -158,10 +158,10 @@
     "foodImage": "pho.jpg",
     "foodCategory": "Noodles",
     "price": 11.95,
-    "madeBy": "Chef Linh",
+
     "foodOrigin": "Vietnam",
     "description": "Vietnamese noodle soup with beef, herbs, and bean sprouts.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -169,10 +169,10 @@
     "foodImage": "lobster-bisque.jpg",
     "foodCategory": "Soup",
     "price": 16.99,
-    "madeBy": "Chef Jacqueline",
+
     "foodOrigin": "France",
     "description": "Creamy soup with lobster meat and a touch of sherry.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -180,10 +180,10 @@
     "foodImage": "falafel.jpg",
     "foodCategory": "Middle Eastern",
     "price": 9.75,
-    "madeBy": "Chef Rami",
+
     "foodOrigin": "Lebanon",
     "description": "Fried chickpea patties in a wrap with tahini sauce and veggies.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -191,10 +191,10 @@
     "foodImage": "tiramisu.jpg",
     "foodCategory": "Dessert",
     "price": 6.99,
-    "madeBy": "Pastry Chef Alessia",
+
     "foodOrigin": "Italy",
     "description": "Layered dessert with coffee-soaked ladyfingers, mascarpone cheese, and cocoa.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -202,10 +202,10 @@
     "foodImage": "ceviche.jpg",
     "foodCategory": "Seafood",
     "price": 14.5,
-    "madeBy": "Chef Carlos",
+
     "foodOrigin": "Peru",
     "description": "Fresh fish and seafood marinated in citrus juice, with onions and cilantro.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -213,10 +213,10 @@
     "foodImage": "moussaka.jpg",
     "foodCategory": "Greek",
     "price": 12.99,
-    "madeBy": "Chef Katerina",
+
     "foodOrigin": "Greece",
     "description": "Layered dish with eggplant, ground meat, and béchamel sauce, baked to perfection.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -224,10 +224,10 @@
     "foodImage": "gyros.jpg",
     "foodCategory": "Greek",
     "price": 10.95,
-    "madeBy": "Chef Nikos",
+
     "foodOrigin": "Greece",
     "description": "Sliced meat, tomatoes, onions, and tzatziki sauce in a pita bread.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -235,10 +235,10 @@
     "foodImage": "miso-soup.jpg",
     "foodCategory": "Soup",
     "price": 4.5,
-    "madeBy": "Chef Yuki",
+
     "foodOrigin": "Japan",
     "description": "Japanese soup with miso paste, seaweed, tofu, and scallions.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -246,10 +246,10 @@
     "foodImage": "biryani.jpg",
     "foodCategory": "Indian",
     "price": 15.75,
-    "madeBy": "Chef Suresh",
+
     "foodOrigin": "India",
     "description": "Fragrant rice dish with spices, chicken, or vegetables, and garnished with fried onions and raisins.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -257,10 +257,10 @@
     "foodImage": "samosas.jpg",
     "foodCategory": "Indian",
     "price": 8.25,
-    "madeBy": "Chef Meera",
+
     "foodOrigin": "India",
     "description": "Crispy pastry filled with spiced potatoes and peas, served with chutney.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   },
   {
@@ -268,10 +268,10 @@
     "foodImage": "tiramisu.jpg",
     "foodCategory": "Dessert",
     "price": 6.99,
-    "madeBy": "Pastry Chef Alessia",
+
     "foodOrigin": "Italy",
     "description": "Layered dessert with coffee-soaked ladyfingers, mascarpone cheese, and cocoa.",
-    "processed_count": 0,
+    "purchase_count": 0,
     "inStock": true
   }
 ]
