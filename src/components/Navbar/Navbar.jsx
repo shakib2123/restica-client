@@ -84,7 +84,7 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
           layout
           transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
-          className="navbar-end"
+          className="navbar-end z-50"
         >
           {user ? (
             <div className="dropdown dropdown-end">
