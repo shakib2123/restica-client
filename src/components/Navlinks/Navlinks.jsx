@@ -29,7 +29,7 @@ const Navlinks = () => {
           <FaCartShopping /> Shop
         </NavLink>
       </li>
-      <li>
+      <li title="blog">
         <NavLink
           to="/blog"
           className={({ isActive }) =>

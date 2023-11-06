@@ -3,7 +3,7 @@ import Navlinks from "../Navlinks/Navlinks";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
@@ -103,11 +103,49 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
+                <li className="border-b">
                   <p>{user?.displayName}</p>
                 </li>
+
                 <li>
-                  <button onClick={handleLogout}>Logout</button>
+                  <NavLink
+                    to="/myAddedFood"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-lg font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+                        : "text-lg text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+                    }
+                  >
+                    My added food
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/addFood"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-lg font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+                        : "text-lg text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+                    }
+                  >
+                    Add a food
+                  </NavLink>
+                </li>
+                <li className="border-b">
+                  <NavLink
+                    to="/orderedFood"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-lg font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"
+                        : "text-lg text-pink-500 hover:text-pink-600 font-medium rounded-lg hover:scale-105"
+                    }
+                  >
+                    My ordered food
+                  </NavLink>
+                </li>
+
+                <li>
+                  <button className="btn btn-warning btn-sm btn-block text-white rounded-lg" onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>

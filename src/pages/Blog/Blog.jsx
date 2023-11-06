@@ -4,85 +4,82 @@ const Blog = () => {
   return (
     <div>
       <Navbar />
-   
-        <div className="flex justify-center">
-          <div className="flex flex-col max-w-7xl justify-center items-center">
-            <div className="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
-              <div className="h-26 w-full overflow-hidden">
-                {" "}
-                <img
-                  src="https://source.unsplash.com/random/500x400/?nature "
-                  alt=""
-                  className=""
-                />{" "}
+
+      <div className="flex justify-center my-8">
+        <div className="flex flex-col max-w-7xl justify-center items-center">
+          <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+            <div className="h-full w-full overflow-hidden">
+              {" "}
+              <img
+                src="https://i.ibb.co/FK9MBmV/data-binding.png"
+                alt=""
+                className="w-full md:w-96 h-full"
+              />{" "}
+            </div>
+            <div className="grid p-2">
+              <div className="font-bold text-lg text-black m-2 mt-10">
+                What is One way data binding?{" "}
               </div>
-              <div className="grid p-2">
-                <div className="font-bold text-lg text-black m-2 mt-10">
-                  Love is like wildflowers; it is often found in the most
-                  unlikely places.{" "}
-                </div>
-                <div className="text-gray-500 m-2 text-sm">
-                  <a href="">
-                    Flowers are a beautiful way to show your appreciation for
-                    someone. They are also a great way to show your love.
-                    Flowers can be delivered in a variety of ways, including
-                    through mail, messenger, or even in person.
-                  </a>
-                </div>
+              <div className="text-gray-500 m-2 text-sm">
+                One way data binding is a technique where the data flows in one
+                direction from the source to the target. The source is usually a
+                component or a model that contains the data, and the target is
+                usually a view or a UI element that displays the data. One way
+                data binding allows the view to be updated automatically when
+                the data changes in the source, but it does not allow the source
+                to be updated from the view. This means that the user cannot
+                modify the data by interacting with the view.
               </div>
             </div>
-            <div className="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
-              <div className="grid p-2">
-                <div className="font-bold text-lg text-black m-2 mt-10">
-                  However alert we are, antiquity remains an unknown,
-                  unanticipated galaxy.{" "}
-                </div>
-                <div className="text-gray-500 m-2 text-sm">
-                  <a href="">
-                    The Universe is a vast and ever-expanding place. It is
-                    composed of an estimated 100 billion galaxies, each with
-                    billions of stars. It is estimated that there are as many as
-                    100 billion galaxies in the observable universe.{" "}
-                  </a>
-                </div>
+          </div>
+          <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+            <div className="h-full w-full overflow-hidden">
+              {" "}
+              <img
+                src="https://i.ibb.co/6nBxdH3/What-is-NPM.jpg"
+                alt=""
+                className="w-full md:w-96 h-full"
+              />{" "}
+            </div>
+            <div className="grid p-2">
+              <div className="font-bold text-lg text-black m-2 mt-10">
+                What is NPM in node.js?{" "}
               </div>
-              <div className="h-26 w-full overflow-hidden">
-                {" "}
-                <img
-                  src="https://source.unsplash.com/random/500x400/?man "
-                  alt=""
-                  className=""
-                />{" "}
+              <div className="text-gray-500 m-2 text-sm">
+                NPM stands for Node Package Manager. It is a tool that helps you
+                to install, manage, and share Node.js packages, or modules, that
+                contain code and dependencies for your projects. NPM also
+                provides a command line interface (CLI) that allows you to run
+                scripts, test, and publish your packages
               </div>
             </div>
-            <div className="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
-              <div className="h-26 w-full overflow-hidden">
-                {" "}
-                <img
-                  src="https://source.unsplash.com/random/500x400/?people "
-                  alt=""
-                  className=""
-                />{" "}
+          </div>
+          <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+            <div className="h-full w-full overflow-hidden">
+              {" "}
+              <img
+                src="https://i.ibb.co/qnKSkVV/Different-between-Mongodb-database-vs-my-SQL-database.jpg"
+                alt=""
+                className="w-full md:w-96 h-full"
+              />{" "}
+            </div>
+            <div className="grid p-2">
+              <div className="font-bold text-lg text-black m-2 mt-10">
+                Different between Mongodb database vs mySQL database.
               </div>
-              <div className="grid p-2">
-                <div className="font-bold text-lg text-black m-2 mt-10">
-                  It is the friends you can call up at 4 a.m. that matter.{" "}
-                </div>
-                <div className="text-gray-500 m-2 text-sm">
-                  <a href="">
-                    The bond of friendship is one that is often unspoken and
-                    unrivaled. It is a relationship that is founded on mutual
-                    respect and understanding. Friendship is something that can
-                    be found in all walks of life, and is often the foundation
-                    of a successful life.{" "}
-                  </a>
-                </div>
+              <div className="text-gray-500 m-2 text-sm">
+                MongoDB does not support referential integrity, isolation, or
+                complex transactions, while MySQL does. This means that MongoDB
+                does not enforce the relationships between data or prevent
+                concurrent access or modification of data, while MySQL does.
+                MongoDB relies on the application logic to ensure data quality
+                and consistency, while MySQL enforces data rules and constraints
+                at the database level.
               </div>
             </div>
           </div>
         </div>
-        
-      
+      </div>
     </div>
   );
 };
