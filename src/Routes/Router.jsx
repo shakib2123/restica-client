@@ -8,6 +8,7 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Blog from "../pages/Blog/Blog";
 import AllFood from "../pages/AllFood/AllFood";
+import SingleFoodPage from "../pages/SingleFoodPage/SingleFoodPage";
 
 const Router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const Router = createBrowserRouter([
         <AddProduct />
       </PrivateRoute>
     ),
+  },
+  {
+    path: "/singleFoodPage/:id",
+    element: <SingleFoodPage />,
   },
 ]);
 

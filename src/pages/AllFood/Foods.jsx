@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Foods = ({ food }) => {
   const { _id, name, image, category, quantity, price } = food;
   return (
-    <div className="w-auto h-auto border-[3px] shadow-xl rounded-xl hover:transform hover:scale-105 duration-500 ease-in-out hover:shadow-2xl hover:border-pink-400">
+    <div className="w-auto h-auto border-[3px] shadow-xl shadow-pink-200 hover:shadow-pink-700  rounded-xl hover:transform hover:scale-105 duration-500 ease-in-out hover:shadow-2xl hover:border-pink-400">
       <div className="border border-pink-200 bg-white rounded-md shadow-md relative z-10 divide-y divide-solid divide-pink-300 space-y-9">
         <div>
           <div className="uppercase tracking-wider text-white text-center rounded-md  -ml-[8px] -mr-[8px] mt-5 p-3 border border-pink-400 bg-pink-400 font-bold">
@@ -30,7 +30,7 @@ const Foods = ({ food }) => {
           </div>
         </div>
       </div>
-      <Link to={`/`}>
+      <Link to={`/singleFoodPage/${_id}`}>
         <div className="uppercase text-gray-500 text-center rounded-b-md w-auto pt-8 pb-[30px] text-sm font-bold -mt-2 relative z-0 hover:text-pink-600 hover:bg-pink-200">
           Show Details
         </div>
