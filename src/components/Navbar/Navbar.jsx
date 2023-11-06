@@ -50,7 +50,7 @@ const Navbar = () => {
               <div className="drawer-content">
                 {/* Page content here */}
                 <label htmlFor="my-drawer" className="drawer-button">
-                  <AiOutlineMenuUnfold className="text-2xl text-white font-bold" />
+                  <AiOutlineMenuUnfold className="text-2xl text-pink-400 font-bold" />
                 </label>
               </div>
               <div className="drawer-side">

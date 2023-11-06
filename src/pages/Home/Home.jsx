@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import StepSection from "../../components/StepSection/StepSection";
 import TopRatedProduct from "../../components/TopRatedProduct/TopRatedProduct";
-import AllFood from "../AllFood/AllFood";
+
 
 const Home = () => {
   return (

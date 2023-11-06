@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 import Navbar from "../../components/Navbar/Navbar";
@@ -42,9 +42,9 @@ const SingleFoodPage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="px-2">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 bg-gray-200 rounded-2xl border-2 border-pink-700 my-8 p-3 md:p-8">
-          <div className="bg-gray-300 rounded-xl">
+      <div className="px-2 max-w-7xl mx-auto">
+        <div className=" flex flex-col lg:flex-row gap-6 bg-gray-200 rounded-2xl  border-2 border-pink-700 my-8 p-3 md:p-8">
+          <div className="bg-gray-300 shadow-lg shadow-slate-400 rounded-xl">
             <div className="card card-compact">
               <figure>
                 <img src={food.image} alt="Shoes" />
@@ -68,9 +68,11 @@ const SingleFoodPage = () => {
                 </h3>
                 <p className="text-lg">{food?.description}</p>
                 <div className="card-actions mt-3">
-                  <button className="btn btn-primary btn-block rounded-lg text-white hover:scale-105 shadow-lg shadow-primary">
-                    Order Now
-                  </button>
+                  <Link to={`/orderPage/${food._id}`}>
+                    <button className="btn btn-primary btn-block rounded-lg text-white hover:scale-105 shadow-lg shadow-primary">
+                      Order Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
