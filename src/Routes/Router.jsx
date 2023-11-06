@@ -54,6 +54,7 @@ const Router = createBrowserRouter([
   {
     path: "/orderPage/:id",
     element: <OrderPage />,
+    loader: ({params}) => fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
   },
 ]);
 
