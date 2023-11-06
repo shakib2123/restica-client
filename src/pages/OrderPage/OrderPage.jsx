@@ -2,9 +2,14 @@ import { useLoaderData } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
+import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 const OrderPage = () => {
+  const axios = useAxios();
   const loadedFood = useLoaderData();
+
   const {
     name,
     quantity,
@@ -14,16 +19,20 @@ const OrderPage = () => {
     category,
     user: madeBy,
     email,
+
+    purchase_count,
   } = loadedFood;
-  
+  const [stock, setStock] = useState(parseInt(quantity));
+  const [count, setCount] = useState(parseInt(purchase_count));
+
   const { user } = useAuth();
-  console.log(user);
-  const handleOrder = (e) => {
+  const handleOrder = async (e) => {
     e.preventDefault();
     const form = e.target;
     const foodName = form.name.value;
     const price = form.price.value;
     const buyer = form.buyer.value;
+    const buyerQuantity = form.quantity.value;
     const email = form.email.value;
     const date = form.date.value;
 
@@ -34,11 +43,40 @@ const OrderPage = () => {
       email,
       date,
       image,
+      buyerQuantity,
       serviceId: _id,
       category,
       madeBy,
     };
-    console.log(order);
+    const parsedQuantity = parseInt(buyerQuantity);
+
+    if (parsedQuantity <= stock) {
+      // Calculate the updated stock and count
+      const updatedStock = stock - parsedQuantity;
+      const updatedCount = count + parsedQuantity;
+
+      // Update the state
+      setStock(updatedStock);
+      setCount(updatedCount);
+      const update = { updatedStock, updatedCount };
+
+      try {
+        const response = await axios.patch(`/foods/${_id}`, update);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+        // Handle error gracefully, e.g., show a message to the user
+      }
+    } else {
+      return Swal.fire("Error!", "Too much amount selected!");
+    }
+
+    axios.post("/orders", order).then((res) => {
+      console.log(res.data);
+      if (res.data.acknowledged) {
+        Swal.fire("Ordered!", "Successfully!", "success");
+      }
+    });
   };
 
   return (
