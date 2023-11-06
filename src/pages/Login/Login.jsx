@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
 const Login = () => {
-  const { logIn } = useAuth();
+  const { logIn, googleLogin, githubLogin } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogIn = (e) => {
@@ -20,14 +20,14 @@ const Login = () => {
       })
       .catch((err) => toast.error(err.message));
   };
-  // const socialLogin = (media) => {
-  //   media()
-  //     .then((res) => {
-  //       navigate(location.state ? location.state : "/");
-  //       Swal.fire("Success!!", "Sign up successfully!", "success");
-  //     })
-  //     .catch((err) => toast.error(err.message));
-  // };
+  const socialLogin = (media) => {
+    media()
+      .then((res) => {
+        navigate(location.state ? location.state : "/");
+        Swal.fire("Success!!", "Sign up successfully!", "success");
+      })
+      .catch((err) => toast.error(err.message));
+  };
 
   return (
     <div
@@ -78,7 +78,10 @@ const Login = () => {
               </div>
             </form>
             <div className="flex gap-10 mt-4">
-              <button className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg">
+              <button
+                onClick={() => socialLogin(googleLogin)}
+                className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg"
+              >
                 <img
                   className="w-full h-full rounded-xl"
                   src="https://i.ibb.co/L584bZ6/download.png"
@@ -86,7 +89,10 @@ const Login = () => {
                 />
                 <h2 className="text-white font-bold text-2xl">Google</h2>
               </button>
-              <button className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg">
+              <button
+                onClick={() => socialLogin(githubLogin)}
+                className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg"
+              >
                 <img
                   className="w-full h-full rounded-xl"
                   src="https://i.ibb.co/YtYFBPH/download.png"

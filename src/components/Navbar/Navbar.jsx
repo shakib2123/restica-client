@@ -2,7 +2,6 @@ import { useState } from "react";
 import Navlinks from "../Navlinks/Navlinks";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";

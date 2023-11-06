@@ -5,6 +5,9 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Blog from "../pages/Blog/Blog";
+import AllFood from "../pages/AllFood/AllFood";
 
 const Router = createBrowserRouter([
   {
@@ -19,6 +22,14 @@ const Router = createBrowserRouter([
     ],
   },
   {
+    path: "/allFood",
+    element: <AllFood />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
@@ -27,9 +38,13 @@ const Router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: '/addProduct',
-    element: <AddProduct/>
-  }
+    path: "/addFood",
+    element: (
+      <PrivateRoute>
+        <AddProduct />
+      </PrivateRoute>
+    ),
+  },
 ]);
 
 export default Router;

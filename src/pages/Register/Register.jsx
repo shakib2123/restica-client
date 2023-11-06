@@ -4,9 +4,12 @@ import loginAnime from "../../assets/LoginAnime.json";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
+
+import useAxios from "../../hooks/useAxios";
 const Register = () => {
-  const { createUser, profileUpdate } = useAuth();
-   const location = useLocation();
+  const { createUser, profileUpdate, googleLogin, githubLogin } = useAuth();
+  const axios = useAxios();
+  const location = useLocation();
   const navigate = useNavigate();
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -15,7 +18,7 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-
+    const user = { name, photo, email, password };
     if (
       !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{8,}$/.test(
         password
@@ -31,11 +34,24 @@ const Register = () => {
           .then((result) => console.log(result))
           .catch((err) => toast.error(err.message));
         e.target.reset();
+        axios
+          .post("/users", user)
+          .then((res) => console.log(res.data));
         Swal.fire("Success!!", "Sign up successfully!", "success");
-         navigate(location.state ? location.state : "/");
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         Swal.fire("Error!!", error.message, "error");
+      });
+  };
+  const socialLogin = (media) => {
+    media()
+      .then((res) => {
+        navigate("/");
+        Swal.fire("Success!!", "Sign up successfully!", "success");
+      })
+      .catch((err) => {
+        Swal.fire("Error!!", err.message, "error");
       });
   };
 
@@ -108,7 +124,10 @@ const Register = () => {
               </div>
             </form>
             <div className="flex gap-10 mt-4">
-              <button className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg">
+              <button
+                onClick={() => socialLogin(googleLogin)}
+                className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg"
+              >
                 <img
                   className="w-full h-full rounded-xl"
                   src="https://i.ibb.co/L584bZ6/download.png"
@@ -116,7 +135,10 @@ const Register = () => {
                 />
                 <h2 className="text-white font-bold text-2xl">Google</h2>
               </button>
-              <button className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg">
+              <button
+                onClick={() => socialLogin(githubLogin)}
+                className="w-full hover:scale-105 shadow-xl hover:shadow-pink-500 h-10 flex items-center gap-2 border-2 border-gray-300 p-2 rounded-lg"
+              >
                 <img
                   className="w-full h-full rounded-xl"
                   src="https://i.ibb.co/YtYFBPH/download.png"

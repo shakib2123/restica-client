@@ -1,6 +1,47 @@
+import Swal from "sweetalert2";
 import Navbar from "../../components/Navbar/Navbar";
+import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
 
 const AddProduct = () => {
+  const { user } = useAuth();
+  console.log(user);
+  const axios = useAxios();
+  const handleAddFood = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const image = form.image.value;
+    const category = form.category.value;
+    const quantity = form.quantity.value;
+    const price = form.price.value;
+    const origin = form.origin.value;
+    const video = form.video.value;
+    const description = form.description.value;
+
+    const food = {
+      name,
+      image,
+      category,
+      quantity,
+      price,
+      origin,
+      video,
+      description,
+      user: user?.displayName,
+      email: user?.email,
+      purchase_count: 0,
+    };
+
+    axios.post("/foods", food).then((res) => {
+      console.log(res.data);
+      if (res.data.acknowledged) {
+        form.reset();
+        Swal.fire("Food added!", "Successfully!", "success");
+      }
+    });
+  };
+
   return (
     <div>
       <Navbar />
@@ -8,7 +49,7 @@ const AddProduct = () => {
         <h2 className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700">
           Add your product !!!
         </h2>
-        <form>
+        <form onSubmit={handleAddFood}>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {/*  row  */}
             <div className="form-control">
@@ -83,12 +124,23 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="origin"
-                placeholder="Food Origin (Country)
-"
+                placeholder="Food Origin (Country)"
                 className="input input-bordered rounded-lg"
                 required
               />
             </div>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Video</span>
+            </label>
+            <input
+              type="text"
+              name="video"
+              placeholder="Video"
+              className="input input-bordered rounded-lg"
+              required
+            />
           </div>
           <div className="form-control">
             <label className="label">

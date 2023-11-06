@@ -32,9 +32,9 @@ const Banner = () =>
 
   return (
     <div  className="z-0 max-w-7xl mx-auto overflow-hidden">
-      <div className="hero min-h-[90vh]">
-        <div className="hero-content flex-col-reverse lg:flex-row">
-          <div className=" lg:text-left">
+      <div className="hero w-full min-h-[90vh]">
+        <div className="hero-content w-full flex-col-reverse lg:flex-row">
+          <div className="text-left">
             <motion.div
              
               className="max-w-xl space-y-5"

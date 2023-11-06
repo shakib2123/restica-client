@@ -2,7 +2,7 @@
   {
     "foodName": "Spaghetti Carbonara",
     "foodImage": "https://i.ibb.co/4myDDtp/olayinka-babalola-r01-Zop-Ti-EV8-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/jlcFwYwiuwY?si=tOMuHR3VYb-o5okV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jlcFwYwiuwY?si=tOMuHR3VYb-o5okV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Pasta",
     "price": 12.99,
 
@@ -13,7 +13,7 @@
   {
     "foodName": "Sushi Rolls",
     "foodImage": "https://i.ibb.co/2ycQ8t4/mahmoud-fawzy-BOJ8-RP7-VQA-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/nIoOv6lWYnk?si=9_DSFIlt6YqKQyI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/nIoOv6lWYnk?si=9_DSFIlt6YqKQyI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Sushi",
     "price": 18.5,
 
@@ -24,7 +24,7 @@
   {
     "foodName": "Hamburger",
     "foodImage": "https://i.ibb.co/hsdfpPq/ilya-mashkov-qxb-JUr9-Rq-I-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/ulhRORJpuBM?si=xIe3lBP_1xyLYQ6r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ulhRORJpuBM?si=xIe3lBP_1xyLYQ6r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Burgers",
     "price": 9.99,
 
@@ -35,7 +35,7 @@
   {
     "foodName": "Pad Thai",
     "foodImage": "https://i.ibb.co/30fgRqw/sirasit-gullasu-Wq-QZl5-g0jk-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/b7YnoRFuZ9o?si=aZFQTLI0kOtKLc2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/b7YnoRFuZ9o?si=aZFQTLI0kOtKLc2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Noodles",
     "price": 10.95,
 
@@ -46,7 +46,7 @@
   {
     "foodName": "Margherita Pizza",
     "foodImage": "https://i.ibb.co/4M8PgNc/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
-    "video": <iframe width="560" height="315" src="https://www.youtube.com/embed/xdshDFwu9x4?si=9LPe5BDbF82aBHH3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video": <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xdshDFwu9x4?si=9LPe5BDbF82aBHH3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Pizza",
     "price": 14.99,
 
@@ -57,7 +57,7 @@
   {
     "foodName": "Tandoori Chicken",
     "foodImage": "https://i.ibb.co/KKYvYw0/angela-bailey-46i7-Fqy4bto-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/HaJG3kdrjy4?si=Vd7QXkdPpyE6fyLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HaJG3kdrjy4?si=Vd7QXkdPpyE6fyLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Chicken",
     "price": 16.75,
 
@@ -68,7 +68,7 @@
   {
     "foodName": "Sushi Nigiri",
     "foodImage": "https://i.ibb.co/Tk9sjrt/andraz-lazic-iy-MT2ifklc-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/ZzLPUoetSHw?si=-zh-un3rrTm8LGZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZzLPUoetSHw?si=-zh-un3rrTm8LGZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Sushi",
     "price": 22.5,
 
@@ -79,7 +79,7 @@
   {
     "foodName": "Caesar Salad",
     "foodImage": "https://i.ibb.co/qNPPsKv/sjna-GKq-CJvf-YAug-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/sSxx64Ku-5c?si=O8wW4HxG3b025qed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/sSxx64Ku-5c?si=O8wW4HxG3b025qed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Salad",
     "price": 8.99,
 
@@ -90,7 +90,7 @@
   {
     "foodName": "Ramen Soup",
     "foodImage": "https://i.ibb.co/8KCZrq7/goodeats-yqr-O0-As-Edq-Ez-PQ-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/r3_tcQiyGG8?si=NX1QuKx0jtGQp6P_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/r3_tcQiyGG8?si=NX1QuKx0jtGQp6P_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Noodles",
     "price": 11.25,
 
@@ -101,7 +101,7 @@
   {
     "foodName": "Beef Tacos",
     "foodImage": "https://i.ibb.co/Stm3YgL/aleisha-kalina-Mjuz-Z5os-x-I-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/mUlipJl5iOQ?si=vUVwMH8eow4KJvg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/mUlipJl5iOQ?si=vUVwMH8eow4KJvg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Tacos",
     "price": 10.5,
 
@@ -112,7 +112,7 @@
   {
     "foodName": "Chicken Shawarma",
     "foodImage": "https://i.ibb.co/sFNjcBC/1000-F-611330056-9-Ri3-Hwa-XHx-Ll-Aoh2x-J5g-KKQba-YB5ha-Df.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/okTIrPD72GI?si=Jb2D2LTJVYMzwnRd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/okTIrPD72GI?si=Jb2D2LTJVYMzwnRd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Middle Eastern",
     "price": 13.99,
 
@@ -123,7 +123,7 @@
   {
     "foodName": "Pancakes",
     "foodImage": "https://i.ibb.co/k39qkx6/nikldn-qp7-WA8-AV2x0-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/NCMKedZvnyI?si=Pb1UrnJRPD53NPGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/NCMKedZvnyI?si=Pb1UrnJRPD53NPGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Breakfast",
     "price": 7.5,
 
@@ -134,7 +134,7 @@
   {
     "foodName": "Goulash",
     "foodImage": "https://i.ibb.co/yBpyNXD/Goulash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/kmvLyGMy9Wo?si=T4OuCs1ji0ilMYKr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kmvLyGMy9Wo?si=T4OuCs1ji0ilMYKr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Stew",
     "price": 12.25,
 
@@ -145,7 +145,7 @@
   {
     "foodName": "Caprese Salad",
     "foodImage": "https://i.ibb.co/ZzdR6nf/melissa-walker-horn-v-ACIn-Yh-Nj-Y0-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/gOcfUgd4ekA?si=c8wha2nMI1TMq_60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gOcfUgd4ekA?si=c8wha2nMI1TMq_60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Salad",
     "price": 9.5,
 
@@ -156,7 +156,7 @@
   {
     "foodName": "Pho",
     "foodImage": "https://i.ibb.co/6HYT32D/hong-anh-duong-EK-n-Am-CYM-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/9Sg21AHuO4A?si=TszNnfdGV5cNcJnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/9Sg21AHuO4A?si=TszNnfdGV5cNcJnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Noodles",
     "price": 11.95,
 
@@ -167,7 +167,7 @@
   {
     "foodName": "Lobster Bisque",
     "foodImage": "https://i.ibb.co/9YNjLHS/katie-musial-Tbg-RGRSwl-No-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/iS7e_3iySi0?si=0sKQMAKug6B2Aew7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/iS7e_3iySi0?si=0sKQMAKug6B2Aew7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Soup",
     "price": 16.99,
 
@@ -178,7 +178,7 @@
   {
     "foodName": "Falafel Wrap",
     "foodImage": "https://i.ibb.co/fq0Xt9p/qwabi-black-ky06-Uu-SDqng-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/AIczG0gl1-I?si=sxWzQ0og1-X7NC-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/AIczG0gl1-I?si=sxWzQ0og1-X7NC-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Middle Eastern",
     "price": 9.75,
 
@@ -189,7 +189,7 @@
   {
     "foodName": "Tiramisu",
     "foodImage": "https://i.ibb.co/BKSgCMh/360-F-39015733-Rlk-Ph-Csk-QTJu-Lc8idgn7mp-Baja-Vi-Wqtn.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/87V4nizNJiE?si=xkl3ABjFMWzmAONy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/87V4nizNJiE?si=xkl3ABjFMWzmAONy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Dessert",
     "price": 6.99,
 
@@ -200,7 +200,7 @@
   {
     "foodName": "Ceviche",
     "foodImage": "https://i.ibb.co/tXYYc3q/pirata-studio-film-Ym-C1-EP6-TJQ-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/MHfYg77rJ-s?si=b5gru9YqvsLX8Fct" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/MHfYg77rJ-s?si=b5gru9YqvsLX8Fct" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Seafood",
     "price": 14.5,
 
@@ -211,7 +211,7 @@
   {
     "foodName": "Moussaka",
     "foodImage": "https://i.ibb.co/QkpYN82/istockphoto-590602574-612x612.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/hT33JyW9pgU?si=5VwzUi1Pr6oGssxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/hT33JyW9pgU?si=5VwzUi1Pr6oGssxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Greek",
     "price": 12.99,
 
@@ -222,7 +222,7 @@
   {
     "foodName": "Gyros",
     "foodImage": "https://i.ibb.co/58nDcW3/360-F-63599261-1w-B2eu3-TCCa-D4vpi2y-JX3-Ufuq-MAl-Fwe7.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/6TIRITAkj60?si=8skjJygk35rRDnxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/6TIRITAkj60?si=8skjJygk35rRDnxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Greek",
     "price": 10.95,
 
@@ -233,7 +233,7 @@
   {
     "foodName": "Miso Soup",
     "foodImage": "https://i.ibb.co/qChDr7d/dan-dealmeida-Qhqj0tc-Xkbg-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/hJ5-UmLCdvs?si=xlgHJvkRQ__UhSWp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/hJ5-UmLCdvs?si=xlgHJvkRQ__UhSWp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Soup",
     "price": 4.5,
 
@@ -244,7 +244,7 @@
   {
     "foodName": "Biryani",
     "foodImage": "https://i.ibb.co/rmrpbQf/shourav-sheikh-j9low-Ncnl04-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/6XlMguO9r-M?si=j6O2rjySUUmWhTxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/6XlMguO9r-M?si=j6O2rjySUUmWhTxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Bangladeshi",
     "price": 15.75,
 
@@ -255,7 +255,7 @@
   {
     "foodName": "Samosas",
     "foodImage": "https://i.ibb.co/0Y4Ypq2/kabir-cheema-8-T9-AVksyt7s-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/lfJ5TjUAnJM?si=E9Q2ChIyU7ad7p-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lfJ5TjUAnJM?si=E9Q2ChIyU7ad7p-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Indian",
     "price": 8.25,
 
@@ -266,7 +266,7 @@
   {
     "foodName": "Tiramisu",
     "foodImage": "https://i.ibb.co/X78xD2k/julie-martins-9-Jzprub-LOs-unsplash.jpg",
-    "video":<iframe width="560" height="315" src="https://www.youtube.com/embed/2FsHfvXrx4g?si=Rk0Y5I8WU5oXCL0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    "video":<iframe width="100%" height="100%" src="https://www.youtube.com/embed/2FsHfvXrx4g?si=Rk0Y5I8WU5oXCL0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     "foodCategory": "Dessert",
     "price": 6.99,
 
