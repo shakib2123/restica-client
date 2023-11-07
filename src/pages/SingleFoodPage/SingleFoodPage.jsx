@@ -68,11 +68,17 @@ const SingleFoodPage = () => {
                 </h3>
                 <p className="text-lg">{food?.description}</p>
                 <div className="card-actions mt-3">
-                  <Link to={`/orderPage/${food._id}`}>
-                    <button className="btn btn-primary btn-block rounded-lg text-white hover:scale-105 shadow-lg shadow-primary">
-                      Order Now
+                  {parseInt(food.quantity) <= 0 ? (
+                    <button className="btn btn-disabled">
+                      Currently unavailable
                     </button>
-                  </Link>
+                  ) : (
+                    <Link to={`/orderPage/${food._id}`}>
+                      <button className="btn btn-primary btn-block rounded-lg text-white hover:scale-105 shadow-lg shadow-primary">
+                        Order Now
+                      </button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

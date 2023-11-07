@@ -24,15 +24,13 @@ const AllFood = () => {
       return res.data;
     },
   });
-
-  if (isLoading) {
-    return (
-      <div className="h-screen w-full flex justify-center items-center">
-        <PulseLoader size={30} color="#ff00d6" />
-      </div>
-    );
-  }
-
+if (isLoading) {
+  return (
+    <div className="h-screen w-full flex justify-center items-center">
+      <PulseLoader size={30} color="#ff00d6" />
+    </div>
+  );
+}
   if (isError) {
     return (
       <div className="flex max-h-screen overflow-hidden justify-center items-center">
@@ -93,11 +91,17 @@ const AllFood = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8 px-2">
-        {foods?.result.map((food) => (
-          <Foods key={food._id} food={food}></Foods>
-        ))}
-      </div>
+      {isLoading ? (
+        <div className="h-screen w-full flex justify-center items-center">
+          <PulseLoader size={30} color="#ff00d6" />
+        </div>
+      ) : (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8 px-2">
+          {foods?.result.map((food) => (
+            <Foods key={food._id} food={food}></Foods>
+          ))}
+        </div>
+      )}
       <div className="flex justify-center my-8">
         <div className="join rounded-lg">
           <button onClick={handlePrev} className="join-item btn">

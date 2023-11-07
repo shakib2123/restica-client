@@ -109,7 +109,7 @@ const Navbar = () => {
 
                 <li>
                   <NavLink
-                    to="/myAddedFood"
+                    to="/myAddedFoods"
                     className={({ isActive }) =>
                       isActive
                         ? "bg-pink-600 shadow-lg shadow-pink-500 hover:shadow-xl hover:bg-pink-600 hover:shadow-pink-600 text-lg font-medium text-white hover:text-gray-200 hover:scale-105  rounded-lg"

@@ -2,12 +2,13 @@ import Swal from "sweetalert2";
 import Navbar from "../../components/Navbar/Navbar";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
+import { useLoaderData } from "react-router-dom";
 
-const AddProduct = () => {
+const FoodUpdate = () => {
   const { user } = useAuth();
-  console.log(user);
+  const loadedFood = useLoaderData();
   const axios = useAxios();
-  const handleAddFood = (e) => {
+  const handleUpdateFood = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -33,23 +34,22 @@ const AddProduct = () => {
       purchase_count: 0,
     };
 
-    axios.post("/foods", food).then((res) => {
+    axios.patch(`/foods/${loadedFood?._id}`, food).then((res) => {
       console.log(res.data);
       if (res.data.acknowledged) {
         form.reset();
-        Swal.fire("Food added!", "Successfully!", "success");
+        Swal.fire("Food updated!", "Successfully!", "success");
       }
     });
   };
-
   return (
     <div>
       <Navbar />
       <div className="max-w-7xl mx-auto px-3 py-8 md:py-16">
         <h2 className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700">
-          Add your product !!!
+          Update your product !!!
         </h2>
-        <form onSubmit={handleAddFood}>
+        <form onSubmit={handleUpdateFood}>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {/*  row  */}
             <div className="form-control">
@@ -59,7 +59,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Food Name"
+                defaultValue={loadedFood.name}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -72,7 +72,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="image"
-                placeholder="Food Image"
+                defaultValue={loadedFood?.image}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -85,7 +85,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="category"
-                placeholder="Food Category"
+                defaultValue={loadedFood?.category}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -98,7 +98,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="quantity"
-                placeholder="quantity"
+                defaultValue={loadedFood?.quantity}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -111,7 +111,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="price"
-                placeholder="Price"
+                defaultValue={loadedFood?.price}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -124,7 +124,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="origin"
-                placeholder="Food Origin (Country)"
+                defaultValue={loadedFood?.origin}
                 className="input input-bordered rounded-lg"
                 required
               />
@@ -137,7 +137,7 @@ const AddProduct = () => {
             <input
               type="text"
               name="video"
-              placeholder="Video"
+              defaultValue={loadedFood?.video}
               className="input input-bordered rounded-lg"
               required
             />
@@ -149,7 +149,7 @@ const AddProduct = () => {
             <textarea
               type="text"
               name="description"
-              placeholder="Description"
+              defaultValue={loadedFood?.description}
               className="textarea textarea-bordered rounded-lg"
               required
             />
@@ -158,7 +158,7 @@ const AddProduct = () => {
             type="submit"
             className="btn btn-block bg-pink-600 hover:bg-pink-700 rounded-lg font-bold mt-8 hover:scale-105 border-0 text-white"
           >
-            Add Food
+            Update Food
           </button>
         </form>
       </div>
@@ -166,4 +166,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default FoodUpdate;
