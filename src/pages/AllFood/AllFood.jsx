@@ -7,31 +7,33 @@ import errorAnime from "../../assets/ErrorAnime.json";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
+
 const AllFood = () => {
   const axios = useAxios();
   const [page, setPage] = useState(1);
   const limit = 9;
   const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("");
   const {
     data: foods,
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["allFoods", page, search],
+    queryKey: ["allFoods", page, search, sort],
     queryFn: async () => {
       const res = await axios.get(
-        `/foods?page=${page}&limit=${limit}&search=${search}`
+        `/foods?page=${page}&limit=${limit}&search=${search}&sortField=price&sortOrder=${sort}`
       );
       return res.data;
     },
   });
-if (isLoading) {
-  return (
-    <div className="h-screen w-full flex justify-center items-center">
-      <PulseLoader size={30} color="#ff00d6" />
-    </div>
-  );
-}
+  if (isLoading) {
+    return (
+      <div className="h-[90vh] w-full flex justify-center items-center">
+        <PulseLoader size={30} color="#ff00d6" />
+      </div>
+    );
+  }
   if (isError) {
     return (
       <div className="flex max-h-screen overflow-hidden justify-center items-center">
@@ -58,21 +60,28 @@ if (isLoading) {
     setSearch(searches);
   };
 
+  const handleSortChange = (e) => {
+    const selectedValue = e.target.value
+    setSort(selectedValue);
+  };
+
   return (
     <div>
       <Navbar />
       <div className="bg-pink-400 mb-8 shadow-lg shadow-pink-500">
         <div className="navbar max-w-7xl mx-auto">
           <div className="flex-1 mr-1">
-            <select className="select w-full rounded-lg max-w-xs">
-              <option disabled selected>
-                Pick your favorite Simpson
+            <select
+              value={sort}
+              onChange={handleSortChange}
+              className="select w-full rounded-lg max-w-xs"
+            >
+              <option value="" disabled>
+                Sort by view
               </option>
-              <option>Homer</option>
-              <option>Marge</option>
-              <option>Bart</option>
-              <option>Lisa</option>
-              <option>Maggie</option>
+              <option value="">Default</option>
+              <option value="desc">High to low</option>
+              <option value="asc">Low to high</option>
             </select>
           </div>
           <div className="flex-none gap-2">
@@ -129,7 +138,7 @@ if (isLoading) {
           </button>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
