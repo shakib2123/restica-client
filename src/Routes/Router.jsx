@@ -10,6 +10,7 @@ import Blog from "../pages/Blog/Blog";
 import AllFood from "../pages/AllFood/AllFood";
 import SingleFoodPage from "../pages/SingleFoodPage/SingleFoodPage";
 import OrderPage from "../pages/OrderPage/OrderPage";
+import MyOrders from "../pages/MyOrders/MyOrders";
 
 const Router = createBrowserRouter([
   {
@@ -54,7 +55,13 @@ const Router = createBrowserRouter([
   {
     path: "/orderPage/:id",
     element: <OrderPage />,
-    loader: ({params}) => fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
+    loader: ({ params }) =>
+      fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
+  },
+  {
+    path: "/orderedFood",
+    element: <MyOrders />,
+    
   },
 ]);
 
