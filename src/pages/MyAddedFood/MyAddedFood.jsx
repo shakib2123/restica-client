@@ -7,6 +7,7 @@ import { PulseLoader } from "react-spinners";
 import Lottie from "lottie-react";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const MyAddedFood = () => {
   const axios = useAxios();
@@ -42,6 +43,9 @@ const MyAddedFood = () => {
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - My Added Food</title>
+      </Helmet>
       <div>
         {isLoading ? (
           <div className=" w-full flex justify-center items-center">

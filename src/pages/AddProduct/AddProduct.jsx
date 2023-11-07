@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
 
 const AddProduct = () => {
   const { user } = useAuth();
@@ -48,9 +49,12 @@ const AddProduct = () => {
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - Add Food</title>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-3 py-8 md:py-16">
         <h2 className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700">
-          Add your product !!!
+          Add your food !!!
         </h2>
         <form onSubmit={handleAddFood}>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">

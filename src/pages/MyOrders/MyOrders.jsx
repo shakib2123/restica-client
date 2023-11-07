@@ -9,6 +9,7 @@ import Lottie from "lottie-react";
 import errorAnime from "../../assets/ErrorAnime.json";
 import Swal from "sweetalert2";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
 const MyOrders = () => {
   const axios = useAxios();
   const queryClient = useQueryClient();
@@ -65,6 +66,9 @@ const MyOrders = () => {
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - My Orders</title>
+      </Helmet>
       {isLoading ? (
         <div className="h-screen w-full flex justify-center items-center">
           <PulseLoader size={30} color="#ff00d6" />
@@ -109,8 +113,8 @@ const MyOrders = () => {
             </div>
           ))}
         </div>
-          )}
-          <Footer/>
+      )}
+      <Footer />
     </div>
   );
 };

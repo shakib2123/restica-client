@@ -8,6 +8,7 @@ import errorAnime from "../../assets/ErrorAnime.json";
 import { BiSolidUser } from "react-icons/bi";
 import { AiOutlineGlobal } from "react-icons/ai";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
 const SingleFoodPage = () => {
   const axios = useAxios();
   const { id } = useParams();
@@ -42,6 +43,9 @@ const SingleFoodPage = () => {
     <div>
       <div>
         <Navbar />
+        <Helmet>
+          <title>RESTICA - Food Details</title>
+        </Helmet>
       </div>
       <div className="px-2 max-w-7xl mx-auto">
         <div className=" flex flex-col lg:flex-row gap-6 bg-gray-200 rounded-2xl  border-2 border-pink-700 my-8 p-3 md:p-8">
@@ -96,7 +100,7 @@ const SingleFoodPage = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

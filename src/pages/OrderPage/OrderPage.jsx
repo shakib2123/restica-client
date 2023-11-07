@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const OrderPage = () => {
   const axios = useAxios();
@@ -82,6 +83,9 @@ const OrderPage = () => {
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - Order</title>
+      </Helmet>
       <form onSubmit={handleOrder} className="max-w-7xl mx-auto my-10 px-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* row */}

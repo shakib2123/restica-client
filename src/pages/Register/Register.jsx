@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import toast, { Toaster } from "react-hot-toast";
 
 import useAxios from "../../hooks/useAxios";
+import { Helmet } from "react-helmet";
 const Register = () => {
   const { createUser, profileUpdate, googleLogin, githubLogin } = useAuth();
   const axios = useAxios();
@@ -63,6 +64,9 @@ const Register = () => {
       }}
       className="flex flex-col justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
     >
+      <Helmet>
+        <title>RESTICA - Register</title>
+      </Helmet>
       <div className="flex lg:items-end flex-col-reverse lg:flex-row px-2 my-8">
         <div className="border bg-pink-800 rounded-2xl">
           <div className="md:w-auto w-[90%] p-8 rounded-xl m-4 flex flex-col items-center  border border-gray-400 opacity-90 bg-pink-600 shadow-xl shadow-pink-600">

@@ -4,6 +4,7 @@ import loginAnime from "../../assets/LoginAnime.json";
 import useAuth from "../../hooks/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 const Login = () => {
   const { logIn, googleLogin, githubLogin } = useAuth();
   const location = useLocation();
@@ -37,6 +38,9 @@ const Login = () => {
       }}
       className="flex flex-col justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
     >
+      <Helmet>
+        <title>RESTICA - Login</title>
+      </Helmet>
       <div className="flex lg:items-end flex-col-reverse lg:flex-row my-8 px-2">
         <div className="border bg-pink-800 rounded-2xl">
           <div className="md:w-auto w-[90%] p-8 rounded-xl m-4 flex flex-col items-center  border border-gray-400 opacity-90 bg-pink-600 shadow-xl shadow-pink-600">

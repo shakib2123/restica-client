@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "../../components/Banner/Banner";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
@@ -9,6 +10,9 @@ import TopRatedProduct from "../../components/TopRatedProduct/TopRatedProduct";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>RESTICA - Home</title>
+      </Helmet>
       <div
         style={{
           backgroundImage:

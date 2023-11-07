@@ -8,6 +8,9 @@ const ErrorPage = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="flex flex-col md:flex-row w-[70%] items-center space-y-4">
+        <Helmet>
+          <title>RESTICA - Error</title>
+        </Helmet>
         <div className="flex-col space-y-4 text-center md:w-1/2 w-[80%]">
           <div className="text-5xl font-medium">Page not found</div>
           <div className="text-gray-500">

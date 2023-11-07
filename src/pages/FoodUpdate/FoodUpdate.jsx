@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import { useLoaderData } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
 
 const FoodUpdate = () => {
   const { user } = useAuth();
@@ -43,6 +44,9 @@ const FoodUpdate = () => {
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - Food Update</title>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-3 py-8 md:py-16">
         <h2 className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700">
           Update your product !!!
@@ -159,8 +163,8 @@ const FoodUpdate = () => {
             Update Food
           </button>
         </form>
-          </div>
-          <Footer/>
+      </div>
+      <Footer />
     </div>
   );
 };

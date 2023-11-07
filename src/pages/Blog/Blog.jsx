@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -5,7 +6,9 @@ const Blog = () => {
   return (
     <div>
       <Navbar />
-
+      <Helmet>
+        <title>RESTICA - Blog</title>
+      </Helmet>
       <div className="flex justify-center my-8">
         <div className="flex flex-col max-w-7xl justify-center items-center">
           <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
@@ -81,7 +84,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

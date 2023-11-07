@@ -7,6 +7,7 @@ import errorAnime from "../../assets/ErrorAnime.json";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
 
 const AllFood = () => {
   const axios = useAxios();
@@ -60,14 +61,19 @@ const AllFood = () => {
     setSearch(searches);
   };
 
-  const handleSortChange = (e) => {
-    const selectedValue = e.target.value
+  const handleSortChange = (e) =>
+  {
+    e.preventDefault();
+    const selectedValue = e.target.value;
     setSort(selectedValue);
   };
 
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>RESTICA - All Foods</title>
+      </Helmet>
       <div className="bg-pink-400 mb-8 shadow-lg shadow-pink-500">
         <div className="navbar max-w-7xl mx-auto">
           <div className="flex-1 mr-1">
