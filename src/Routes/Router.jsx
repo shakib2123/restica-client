@@ -56,7 +56,11 @@ const Router = createBrowserRouter([
   },
   {
     path: "/orderPage/:id",
-    element: <OrderPage />,
+    element: (
+      <PrivateRoute>
+        <OrderPage />
+      </PrivateRoute>
+    ),
     loader: ({ params }) =>
       fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
   },
@@ -71,7 +75,8 @@ const Router = createBrowserRouter([
   {
     path: "/foodUpdate/:id",
     element: <FoodUpdate />,
-    loader: ({params}) => fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
+    loader: ({ params }) =>
+      fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
   },
 ]);
 

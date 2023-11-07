@@ -3,6 +3,7 @@ import deliveryAnime from "../../assets/FoodDeliveryAnime.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+
 const StepSection = () => {
   useEffect(() => {
     AOS.init({
@@ -11,7 +12,10 @@ const StepSection = () => {
     });
   }, []);
   return (
-    <div className="max-w-7xl mx-auto my-14 overflow-hidden bg-pink-200 rounded-3xl">
+    <div
+      data-aos="zoom-in-out"
+      className="max-w-7xl mx-auto my-14 overflow-hidden bg-pink-200 rounded-3xl"
+    >
       <h2 data-aos="zoom-in-up" className="text-4xl lg:text-5xl text-center">
         Our Order <span className="text-pink-600 font-medium">Delivery</span>{" "}
         Process

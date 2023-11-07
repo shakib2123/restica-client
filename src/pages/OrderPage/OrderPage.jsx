@@ -134,6 +134,7 @@ const OrderPage = () => {
               defaultValue={user?.displayName}
               className="input input-bordered rounded-lg"
               required
+              readOnly={true}
             />
           </div>
           {/* row */}
@@ -147,6 +148,7 @@ const OrderPage = () => {
               defaultValue={user?.email}
               className="input input-bordered rounded-lg"
               required
+              readOnly={true}
             />
           </div>
           {/* row */}

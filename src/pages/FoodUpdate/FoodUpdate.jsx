@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import { useLoaderData } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 const FoodUpdate = () => {
   const { user } = useAuth();
@@ -20,7 +21,7 @@ const FoodUpdate = () => {
     const video = form.video.value;
     const description = form.description.value;
 
-    const food = {
+    const updatedFood = {
       name,
       image,
       category,
@@ -29,14 +30,11 @@ const FoodUpdate = () => {
       origin,
       video,
       description,
-      user: user?.displayName,
-      email: user?.email,
-      purchase_count: 0,
     };
 
-    axios.patch(`/foods/${loadedFood?._id}`, food).then((res) => {
+    axios.patch(`/updateFood/${loadedFood?._id}`, updatedFood).then((res) => {
       console.log(res.data);
-      if (res.data.acknowledged) {
+      if (res.data.modifiedCount > 0) {
         form.reset();
         Swal.fire("Food updated!", "Successfully!", "success");
       }
@@ -161,7 +159,8 @@ const FoodUpdate = () => {
             Update Food
           </button>
         </form>
-      </div>
+          </div>
+          <Footer/>
     </div>
   );
 };

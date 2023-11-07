@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import errorAnime from "../../assets/ErrorAnime.json";
 import { BiSolidUser } from "react-icons/bi";
 import { AiOutlineGlobal } from "react-icons/ai";
+import Footer from "../../components/Footer/Footer";
 const SingleFoodPage = () => {
   const axios = useAxios();
   const { id } = useParams();
@@ -95,6 +96,7 @@ const SingleFoodPage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

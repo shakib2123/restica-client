@@ -23,7 +23,7 @@ const TopRatedProduct = () => {
           style={{ y: yText }}
           className="text-3xl lg:text-5xl font-medium  z-10 text-pink-200"
         >
-          🎉Explore Our Customer Favorites🎉
+          Explore Our Customer Favorites🎉
         </motion.h1>
         <motion.div
           style={{
@@ -45,9 +45,6 @@ const TopRatedProduct = () => {
           }}
           className="bg-cover bg-bottom w-full h-full absolute z-10"
         ></motion.div>
-          </div>
-          <div className="max-w-7xl mx-auto my-8">
-              
           </div>
     </div>
   );

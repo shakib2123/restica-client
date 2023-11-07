@@ -9,7 +9,10 @@ const ContactUs = () => {
     });
   }, []);
   return (
-    <div className="flex justify-center my-16 overflow-hidden">
+    <div
+      data-aos="zoom-in-up"
+      className="flex justify-center my-16 overflow-hidden"
+    >
       <div className="flex flex-col md:flex-row justify-center max-w-7xl mt-5">
         <div className="flex flex-col px-7 py-2 bg-slate-200 w-full rounded-tl-3xl">
           <div className="text-lg font-semibold">
@@ -102,13 +105,22 @@ const ContactUs = () => {
           </div>
           <div className="px-5 space-x-5 mt-7 mx-auto mb-5">
             <a>
-              <i data-aos="zoom-in-left" className="fa-brands fa-facebook-f text-white text-2xl"></i>
+              <i
+                data-aos="zoom-in-left"
+                className="fa-brands fa-facebook-f text-white text-2xl"
+              ></i>
             </a>
             <a>
-              <i data-aos="zoom-in-left" className="fa-brands fa-instagram text-red-500 text-2xl"></i>
+              <i
+                data-aos="zoom-in-left"
+                className="fa-brands fa-instagram text-red-500 text-2xl"
+              ></i>
             </a>
             <a>
-              <i  data-aos="zoom-in-left" className="fa-brands fa-linkedin text-yellow-500 text-2xl"></i>
+              <i
+                data-aos="zoom-in-left"
+                className="fa-brands fa-linkedin text-yellow-500 text-2xl"
+              ></i>
             </a>
           </div>
         </div>

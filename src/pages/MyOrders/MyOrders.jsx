@@ -8,6 +8,7 @@ import { PulseLoader } from "react-spinners";
 import Lottie from "lottie-react";
 import errorAnime from "../../assets/ErrorAnime.json";
 import Swal from "sweetalert2";
+import Footer from "../../components/Footer/Footer";
 const MyOrders = () => {
   const axios = useAxios();
   const queryClient = useQueryClient();
@@ -108,7 +109,8 @@ const MyOrders = () => {
             </div>
           ))}
         </div>
-      )}
+          )}
+          <Footer/>
     </div>
   );
 };

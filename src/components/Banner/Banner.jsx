@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import { IoIosArrowForward } from "react-icons/io";
 import { motion} from "framer-motion";
 import foodAnime from "../../assets/FoodAnime.json";
+import { Link } from "react-router-dom";
 const textVariants = {
   initial: {
     y: -400,
@@ -31,12 +32,11 @@ const Banner = () =>
 
 
   return (
-    <div  className="z-0 max-w-7xl mx-auto overflow-hidden">
+    <div className="z-0 max-w-7xl mx-auto overflow-hidden">
       <div className="hero w-full min-h-[90vh]">
         <div className="hero-content w-full flex-col-reverse lg:flex-row">
           <div className="text-left">
             <motion.div
-             
               className="max-w-xl space-y-5"
               variants={textVariants}
               initial="initial"
@@ -54,22 +54,24 @@ const Banner = () =>
                 best in town.
               </motion.p>
 
-              <motion.button
-                variants={textVariants}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="flex items-center text-white cursor-pointer btn bg-pink-600 hover:bg-pink-700 border-0 rounded-lg"
-              >
-                All Menus
-                <motion.span
-                  initial={{ opacity: 0, x: -15 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+              <Link to="/allFood">
+                <motion.button
+                  variants={textVariants}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="flex items-center text-white cursor-pointer btn bg-pink-600 hover:bg-pink-700 border-0 rounded-lg mt-2"
                 >
-                  {" "}
-                  <IoIosArrowForward />
-                </motion.span>
-              </motion.button>
+                  All Menus
+                  <motion.span
+                    initial={{ opacity: 0, x: -15 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ repeat: Infinity, delay: 0.3, duration: 1.5 }}
+                  >
+                    {" "}
+                    <IoIosArrowForward />
+                  </motion.span>
+                </motion.button>
+              </Link>
 
               <motion.img
                 variants={textVariants}
@@ -81,11 +83,7 @@ const Banner = () =>
           </div>
           <div className="card z-0 flex-shrink-0 w-full max-w-sm">
             <div className="flex-1 z-0">
-              <Lottie
-                
-                loop={false}
-                animationData={foodAnime}
-              ></Lottie>
+              <Lottie loop={false} animationData={foodAnime}></Lottie>
             </div>
           </div>
         </div>

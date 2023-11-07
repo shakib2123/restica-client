@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import errorAnime from "../../assets/ErrorAnime.json";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState } from "react";
+import Footer from "../../components/Footer/Footer";
 const AllFood = () => {
   const axios = useAxios();
   const [page, setPage] = useState(1);
@@ -128,6 +129,7 @@ if (isLoading) {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import Navbar from "../../components/Navbar/Navbar";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
+import Footer from "../../components/Footer/Footer";
 
 const AddProduct = () => {
   const { user } = useAuth();
@@ -10,12 +11,14 @@ const AddProduct = () => {
   const handleAddFood = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    const name = form.foodName.value;
     const image = form.image.value;
     const category = form.category.value;
     const quantity = form.quantity.value;
     const price = form.price.value;
     const origin = form.origin.value;
+    const userName = form.name.value;
+    const userEmail = form.email.value;
     const video = form.video.value;
     const description = form.description.value;
 
@@ -28,8 +31,8 @@ const AddProduct = () => {
       origin,
       video,
       description,
-      user: user?.displayName,
-      email: user?.email,
+      user: userName,
+      email: userEmail,
       purchase_count: 0,
     };
 
@@ -58,7 +61,7 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
-                name="name"
+                name="foodName"
                 placeholder="Food Name"
                 className="input input-bordered rounded-lg"
                 required
@@ -129,6 +132,31 @@ const AddProduct = () => {
                 required
               />
             </div>
+            {/*  row  */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Add By (name)</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                defaultValue={user?.displayName}
+                className="input input-bordered rounded-lg"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Add By (email)</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                defaultValue={user?.email}
+                className="input input-bordered rounded-lg"
+                required
+              />
+            </div>
           </div>
           <div className="form-control">
             <label className="label">
@@ -162,6 +190,7 @@ const AddProduct = () => {
           </button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };
