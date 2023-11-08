@@ -10,7 +10,16 @@ import errorAnime from "../../assets/ErrorAnime.json";
 import Swal from "sweetalert2";
 import Footer from "../../components/Footer/Footer";
 import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const MyOrders = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 300,
+    });
+  }, []);
   const axios = useAxios();
   const queryClient = useQueryClient();
   const {
@@ -63,6 +72,7 @@ const MyOrders = () => {
       </div>
     );
   }
+
   return (
     <div>
       <Navbar />
@@ -74,34 +84,49 @@ const MyOrders = () => {
           <PulseLoader size={30} color="#ff00d6" />
         </div>
       ) : (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16">
+        <div
+          data-aos="zoom-in-up"
+          className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16"
+        >
           {orderedFoods.map((orderedFood) => (
             <div
               key={orderedFood._id}
+              data-aos="zoom-in-up"
               className="card card-side bg-base-100 shadow-xl"
             >
               <figure className="w-44 md:w-64">
                 <img
+                  data-aos="zoom-in-up"
                   className="w-full h-full"
                   src={orderedFood.image}
                   alt="img"
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title text-pink-600">
+              <div data-aos="zoom-in-up" className="card-body">
+                <h2 data-aos="zoom-in-up" className="card-title text-pink-600">
                   {orderedFood.foodName}
                 </h2>
-                <p className="text-lg text-primary font-medium">
+                <p
+                  data-aos="zoom-in-up"
+                  className="text-lg text-primary font-medium"
+                >
                   ${orderedFood.price}
                 </p>
-                <h3 className=" text-lg font-bold text-pink-950 bg-pink-300 w-fit p-1 rounded-lg">
+                <h3
+                  data-aos="zoom-in-up"
+                  className=" text-lg font-bold text-pink-950 bg-pink-300 w-fit p-1 rounded-lg"
+                >
                   {orderedFood.madeBy}
                 </h3>
-                <p className="text-gray-700 font-semibold">
+                <p
+                  data-aos="zoom-in-up"
+                  className="text-gray-700 font-semibold"
+                >
                   {orderedFood.date}
                 </p>
-                <div className="card-actions justify-end">
+                <div data-aos="zoom-in-up" className="card-actions justify-end">
                   <button
+                    data-aos="zoom-in-up"
                     onClick={() => mutate(orderedFood._id)}
                     title="delete"
                     className="text-pink-600 hover:text-pink-500 hover:scale-105 text-4xl"

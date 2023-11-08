@@ -8,8 +8,16 @@ import Navbar from "../../components/Navbar/Navbar";
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import { Helmet } from "react-helmet";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const AllFood = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 300,
+    });
+  }, []);
   const axios = useAxios();
   const [page, setPage] = useState(1);
   const limit = 9;
@@ -61,8 +69,7 @@ const AllFood = () => {
     setSearch(searches);
   };
 
-  const handleSortChange = (e) =>
-  {
+  const handleSortChange = (e) => {
     e.preventDefault();
     const selectedValue = e.target.value;
     setSort(selectedValue);
@@ -74,9 +81,12 @@ const AllFood = () => {
       <Helmet>
         <title>RESTICA - All Foods</title>
       </Helmet>
-      <div className="bg-pink-400 mb-8 shadow-lg shadow-pink-500">
+      <div
+        data-aos="zoom-out"
+        className="bg-pink-400 mb-8 shadow-lg shadow-pink-500"
+      >
         <div className="navbar max-w-7xl mx-auto">
-          <div className="flex-1 mr-1">
+          <div data-aos="zoom-out-left" className="flex-1 mr-1">
             <select
               value={sort}
               onChange={handleSortChange}
@@ -90,7 +100,7 @@ const AllFood = () => {
               <option value="asc">Low to high</option>
             </select>
           </div>
-          <div className="flex-none gap-2">
+          <div data-aos="zoom-out-right" className="flex-none gap-2">
             <div className="form-control">
               <form onSubmit={handleSearch} className="join">
                 <input
@@ -112,13 +122,16 @@ const AllFood = () => {
           <PulseLoader size={30} color="#ff00d6" />
         </div>
       ) : (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8 px-2">
+        <div
+          data-aos="zoom-in-down"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8 px-2"
+        >
           {foods?.result.map((food) => (
             <Foods key={food._id} food={food}></Foods>
           ))}
         </div>
       )}
-      <div className="flex justify-center my-8">
+      <div data-aos="zoom-in-down" className="flex justify-center my-8">
         <div className="join rounded-lg">
           <button onClick={handlePrev} className="join-item btn">
             «

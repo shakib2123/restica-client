@@ -1,18 +1,29 @@
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 300,
+    });
+  }, []);
   return (
     <div>
       <Navbar />
       <Helmet>
         <title>RESTICA - Blog</title>
       </Helmet>
-      <div className="flex justify-center my-8">
+      <div data-aos="zoom-in-down" className="flex justify-center my-8">
         <div className="flex flex-col max-w-7xl justify-center items-center">
           <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
-            <div className="h-full w-full overflow-hidden">
+            <div
+              data-aos="zoom-in-up"
+              className="h-full w-full overflow-hidden"
+            >
               {" "}
               <img
                 src="https://i.ibb.co/FK9MBmV/data-binding.png"
@@ -20,7 +31,7 @@ const Blog = () => {
                 className="w-full md:w-96 h-full"
               />{" "}
             </div>
-            <div className="grid p-2">
+            <div data-aos="zoom-in-up" className="grid p-2">
               <div className="font-bold text-lg text-black m-2 mt-10">
                 What is One way data binding?{" "}
               </div>
@@ -36,7 +47,10 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+          <div
+            data-aos="zoom-in-up"
+            className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center"
+          >
             <div className="h-full w-full overflow-hidden">
               {" "}
               <img
@@ -45,7 +59,7 @@ const Blog = () => {
                 className="w-full md:w-96 h-full"
               />{" "}
             </div>
-            <div className="grid p-2">
+            <div data-aos="zoom-in-up" className="grid p-2">
               <div className="font-bold text-lg text-black m-2 mt-10">
                 What is NPM in node.js?{" "}
               </div>
@@ -58,7 +72,10 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
+          <div
+            data-aos="zoom-in-up"
+            className="overflow-hidden bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center"
+          >
             <div className="h-full w-full overflow-hidden">
               {" "}
               <img
@@ -67,7 +84,7 @@ const Blog = () => {
                 className="w-full md:w-96 h-full"
               />{" "}
             </div>
-            <div className="grid p-2">
+            <div data-aos="zoom-in-up" className="grid p-2">
               <div className="font-bold text-lg text-black m-2 mt-10">
                 Different between Mongodb database vs mySQL database.
               </div>

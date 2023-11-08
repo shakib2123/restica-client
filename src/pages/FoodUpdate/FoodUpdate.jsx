@@ -5,7 +5,9 @@ import useAxios from "../../hooks/useAxios";
 import { useLoaderData } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import { Helmet } from "react-helmet";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const FoodUpdate = () => {
   const { user } = useAuth();
   const loadedFood = useLoaderData();
@@ -41,20 +43,32 @@ const FoodUpdate = () => {
       }
     });
   };
+   useEffect(() => {
+     AOS.init({
+       duration: 1000,
+       delay: 300,
+     });
+   }, []);
   return (
     <div>
       <Navbar />
       <Helmet>
         <title>RESTICA - Food Update</title>
       </Helmet>
-      <div className="max-w-7xl mx-auto px-3 py-8 md:py-16">
-        <h2 className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700">
+      <div
+        data-aos="zoom-in-up"
+        className="max-w-7xl mx-auto px-3 py-8 md:py-16"
+      >
+        <h2
+          data-aos="zoom-in-up"
+          className="text-center text-4xl lg:text-5xl font-medium my-8 text-pink-700"
+        >
           Update your product !!!
         </h2>
-        <form onSubmit={handleUpdateFood}>
+        <form data-aos="zoom-in-up" onSubmit={handleUpdateFood}>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">Food Name</span>
               </label>
@@ -67,7 +81,7 @@ const FoodUpdate = () => {
               />
             </div>
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">Food Image</span>
               </label>
@@ -80,7 +94,7 @@ const FoodUpdate = () => {
               />
             </div>
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">Food Category</span>
               </label>
@@ -93,7 +107,7 @@ const FoodUpdate = () => {
               />
             </div>
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">quantity</span>
               </label>
@@ -106,7 +120,7 @@ const FoodUpdate = () => {
               />
             </div>
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
@@ -119,7 +133,7 @@ const FoodUpdate = () => {
               />
             </div>
             {/*  row  */}
-            <div className="form-control">
+            <div data-aos="zoom-in-up" className="form-control">
               <label className="label">
                 <span className="label-text">Food Origin (Country)</span>
               </label>
@@ -132,7 +146,7 @@ const FoodUpdate = () => {
               />
             </div>
           </div>
-          <div className="form-control">
+          <div data-aos="zoom-in-up" className="form-control">
             <label className="label">
               <span className="label-text">Video</span>
             </label>
@@ -144,7 +158,7 @@ const FoodUpdate = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div data-aos="zoom-in-up" className="form-control">
             <label className="label">
               <span className="label-text">Description</span>
             </label>
@@ -157,6 +171,7 @@ const FoodUpdate = () => {
             />
           </div>
           <button
+            data-aos="zoom-in-up"
             type="submit"
             className="btn btn-block bg-pink-600 hover:bg-pink-700 rounded-lg font-bold mt-8 hover:scale-105 border-0 text-white"
           >

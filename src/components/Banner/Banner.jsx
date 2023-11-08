@@ -37,7 +37,7 @@ const Banner = () =>
         <div className="hero-content w-full flex-col-reverse lg:flex-row">
           <div className="text-left">
             <motion.div
-              className="max-w-xl space-y-5"
+              className="space-y-5"
               variants={textVariants}
               initial="initial"
               animate="animate"

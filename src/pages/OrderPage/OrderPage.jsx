@@ -28,7 +28,22 @@ const OrderPage = () => {
   } = loadedFood;
   const [stock, setStock] = useState(parseInt(quantity));
   const [count, setCount] = useState(parseInt(purchase_count));
-  const [date, setDate] = useState(new Date());
+  const currentTimestamp = Date.now();
+
+  // Create a Date object using the timestamp
+  const currentDate = new Date(currentTimestamp);
+
+  // Get individual components of the date
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth() + 1; // Month is zero-based
+  const day = currentDate.getDate();
+
+  // Format the date string
+  const formattedDate = `${year}-${month < 10 ? "0" : ""}${month}-${
+    day < 10 ? "0" : ""
+  }${day}`;
+
+  console.log(formattedDate);
   const { user } = useAuth();
   const handleOrder = async (e) => {
     e.preventDefault();
@@ -44,7 +59,7 @@ const OrderPage = () => {
       price,
       buyer,
       email,
-      date,
+      date: formattedDate,
       image,
       buyerQuantity,
       serviceId: _id,
@@ -80,7 +95,7 @@ const OrderPage = () => {
       }
     });
   };
-  console.log(date);
+
   return (
     <div>
       <Navbar />
@@ -142,37 +157,20 @@ const OrderPage = () => {
               readOnly={true}
             />
           </div>
-          {/* row */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Buyer Email</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              defaultValue={user?.email}
-              className="input input-bordered rounded-lg"
-              required
-              readOnly={true}
-            />
-          </div>
-          {/* row */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Buying Date</span>
-            </label>
-            <DatePicker
-              selected={date}
-              onChange={(date) => setDate(date)}
-              dateFormat="yyyy-MM-dd"
-              filterDate={(date) => date.getDay() != 5}
-              minDate={new Date()}
-              showYearDropdown
-              scrollableMonthYearDropdown
-              className="input input-bordered rounded-lg w-full"
-              required
-            />
-          </div>
+        </div>
+        {/* row */}
+        <div className="form-control mb-8">
+          <label className="label">
+            <span className="label-text">Buyer Email</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            defaultValue={user?.email}
+            className="input input-bordered rounded-lg"
+            required
+            readOnly={true}
+          />
         </div>
         {user?.email === email ? (
           <button className="btn btn-disabled rounded-lg btn-block">

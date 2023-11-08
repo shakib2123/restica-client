@@ -4,19 +4,38 @@ import { motion } from "framer-motion";
 import errorAnime from "../../assets/ErrorPageAnime.json";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-const ErrorPage = () => {
+import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+const ErrorPage = () =>
+{
+     useEffect(() => {
+       AOS.init({
+         duration: 1000,
+         delay: 300,
+       });
+     }, []);
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="flex flex-col md:flex-row w-[70%] items-center space-y-4">
         <Helmet>
           <title>RESTICA - Error</title>
         </Helmet>
-        <div className="flex-col space-y-4 text-center md:w-1/2 w-[80%]">
-          <div className="text-5xl font-medium">Page not found</div>
-          <div className="text-gray-500">
+        <div
+          data-aos="zoom-in-up"
+          className="flex-col space-y-4 text-center md:w-1/2 w-[80%]"
+        >
+          <div data-aos="zoom-in-up" className="text-5xl font-medium">
+            Page not found
+          </div>
+          <div data-aos="zoom-in-up" className="text-gray-500">
             Sorry, the page you're looking for isn't available.
           </div>
-          <div className="flex items-center justify-center">
+          <div
+            data-aos="zoom-in-up"
+            className="flex items-center justify-center"
+          >
             <Link to="/">
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -28,8 +47,14 @@ const ErrorPage = () => {
             </Link>
           </div>
         </div>
-        <div className="md:w-96 w-[70%] md:h-96 h-48  bg-gray-200 rounded-xl overflow-hidden">
-          <div className="flex justify-center items-center">
+        <div
+          data-aos="zoom-in-up"
+          className="md:w-96 w-[70%] md:h-96 h-48  bg-gray-200 rounded-xl overflow-hidden"
+        >
+          <div
+            data-aos="zoom-in-up"
+            className="flex justify-center items-center"
+          >
             <Lottie
               animationData={errorAnime}
               style={{ maxHeigh: 200, width: 300 }}
