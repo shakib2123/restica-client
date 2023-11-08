@@ -55,13 +55,13 @@ const AuthProvider = ({ children }) => {
       setLoader(false);
       if (currentUser) {
         axios
-          .post("http://localhost:5000/api/v1/jwt", loggedUser, {
+          .post("https://restica-server.vercel.app/api/v1/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => console.log("access token", res.data));
       } else {
         axios
-          .post("http://localhost:5000/api/v1/logout", loggedUser, {
+          .post("https://restica-server.vercel.app/api/v1/logout", loggedUser, {
             withCredentials: true,
           })
           .then((res) => console.log("clean access token", res.data));
@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
     return () => {
       return unSubscribe();
     };
-  }, []);
+  }, [user?.email]);
 
   const authInfo = {
     user,

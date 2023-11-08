@@ -26,6 +26,7 @@ const MyOrders = () => {
     data: orderedFoods,
     isLoading,
     isError,
+    refetch,
   } = useQuery({
     queryKey: ["orderedFood"],
     queryFn: async () => {
@@ -55,13 +56,14 @@ const MyOrders = () => {
         }
       });
     },
-    onSuccess: () => {
+    onSuccess: (orderedFoods) => {
+      refetch(orderedFoods);
       Swal.fire({
         title: "Deleted!",
         text: "Your order has been deleted.",
         icon: "success",
       });
-      queryClient.invalidateQueries({ queryKey: ["orderedFood"] });
+      queryClient.invalidateQueries(["orderedFood"]);
     },
   });
 
@@ -86,15 +88,15 @@ const MyOrders = () => {
       ) : (
         <div
           data-aos="zoom-in-up"
-          className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16"
+          className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16 min-h-[90vh]"
         >
           {orderedFoods.map((orderedFood) => (
             <div
               key={orderedFood._id}
               data-aos="zoom-in-up"
-              className="card card-side bg-base-100 shadow-xl"
+              className="card card-side bg-base-100 max-h-72 shadow-xl"
             >
-              <figure className="w-44 md:w-64">
+              <figure className="w-40 md:w-64">
                 <img
                   data-aos="zoom-in-up"
                   className="w-full h-full"
@@ -114,7 +116,7 @@ const MyOrders = () => {
                 </p>
                 <h3
                   data-aos="zoom-in-up"
-                  className=" text-lg font-bold text-pink-950 bg-pink-300 w-fit p-1 rounded-lg"
+                  className=" text-lg font-bold text-pink-950 bg-pink-300 w-fit p-1 lg:rounded-lg"
                 >
                   {orderedFood.madeBy}
                 </h3>

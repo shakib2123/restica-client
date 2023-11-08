@@ -86,8 +86,9 @@ const AllFood = () => {
         className="bg-pink-400 mb-8 shadow-lg shadow-pink-500"
       >
         <div className="navbar max-w-7xl mx-auto">
-          <div data-aos="zoom-out-left" className="flex-1 mr-1">
+          <div className="flex-1 mr-1">
             <select
+              data-aos="zoom-out"
               value={sort}
               onChange={handleSortChange}
               className="select w-full rounded-lg max-w-xs"
@@ -100,9 +101,13 @@ const AllFood = () => {
               <option value="asc">Low to high</option>
             </select>
           </div>
-          <div data-aos="zoom-out-right" className="flex-none gap-2">
+          <div className="flex-none gap-2">
             <div className="form-control">
-              <form onSubmit={handleSearch} className="join">
+              <form
+                data-aos="zoom-out"
+                onSubmit={handleSearch}
+                className="join"
+              >
                 <input
                   type="text"
                   name="searches"

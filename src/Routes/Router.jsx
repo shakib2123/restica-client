@@ -62,7 +62,7 @@ const Router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: ({ params }) =>
-      fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
+      fetch(`https://restica-server.vercel.app/api/v1/foods/${params.id}`),
   },
   {
     path: "/orderedFood",
@@ -88,7 +88,7 @@ const Router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: ({ params }) =>
-      fetch(`http://localhost:5000/api/v1/foods/${params.id}`),
+      fetch(`https://restica-server.vercel.app/api/v1/foods/${params.id}`),
   },
 ]);
 
