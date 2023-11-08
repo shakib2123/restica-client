@@ -58,6 +58,9 @@ const SingleFoodPage = () => {
                 <h2 className="card-title text-2xl text-pink-700">
                   {food?.name}
                 </h2>
+                <h2 className="card-title text-xl text-pink-900">
+                  {food?.category}
+                </h2>
                 <h3 className="text-xl font-medium">${food?.price}</h3>
                 <h3 className="text-lg font-semibold p-1 bg-pink-300 w-fit rounded-lg text-pink-700 flex items-center gap-2">
                   <span className="text-pink-900 text-2xl">

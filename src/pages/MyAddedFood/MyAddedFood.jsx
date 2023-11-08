@@ -62,7 +62,7 @@ const MyAddedFood = () => {useEffect(() => {
         ) : (
           <div
             data-aos="zoom-in-up"
-            className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16"
+            className="max-w-7xl mx-auto grid grid-cols-1 px-2 lg:grid-cols-2 gap-4 md:gap-8  my-8 md:my-16 min-h-[90vh]"
           >
             {myAddedFoods?.result?.map((myAddedFood) => (
               <div
