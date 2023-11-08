@@ -4,8 +4,11 @@ import Footer from "../../components/Footer/Footer";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const OrderPage = () => {
   const axios = useAxios();
@@ -25,7 +28,7 @@ const OrderPage = () => {
   } = loadedFood;
   const [stock, setStock] = useState(parseInt(quantity));
   const [count, setCount] = useState(parseInt(purchase_count));
-
+  const [date, setDate] = useState(new Date());
   const { user } = useAuth();
   const handleOrder = async (e) => {
     e.preventDefault();
@@ -35,7 +38,6 @@ const OrderPage = () => {
     const buyer = form.buyer.value;
     const buyerQuantity = form.quantity.value;
     const email = form.email.value;
-    const date = form.date.value;
 
     const order = {
       foodName,
@@ -66,7 +68,6 @@ const OrderPage = () => {
         console.log(response.data);
       } catch (error) {
         console.error(error);
-        // Handle error gracefully, e.g., show a message to the user
       }
     } else {
       return Swal.fire("Error!", "Too much amount selected!");
@@ -79,7 +80,7 @@ const OrderPage = () => {
       }
     });
   };
-
+  console.log(date);
   return (
     <div>
       <Navbar />
@@ -160,10 +161,15 @@ const OrderPage = () => {
             <label className="label">
               <span className="label-text">Buying Date</span>
             </label>
-            <input
-              type="date"
-              name="date"
-              className="input input-bordered rounded-lg"
+            <DatePicker
+              selected={date}
+              onChange={(date) => setDate(date)}
+              dateFormat="yyyy-MM-dd"
+              filterDate={(date) => date.getDay() != 5}
+              minDate={new Date()}
+              showYearDropdown
+              scrollableMonthYearDropdown
+              className="input input-bordered rounded-lg w-full"
               required
             />
           </div>
